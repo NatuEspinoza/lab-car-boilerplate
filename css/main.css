@@ -1,11 +1,51 @@
+/* Clases generales */
+h1 {
+  margin: 0 0 1em 0;
+}
+.box {
+  display: inline-block;
+  width: 5em;
+  height: auto;
+  padding: 0 1em 0 1em;
+}
+hr {
+  width: 8em;
+  display: inline-flex;
+}
+.primary {
+  background: #f7b617;
+}
+
 /* Estilo para el boton de menú mobile */
 .navbar-toggle {
   float: left;
 }
 
-/* Estilo para menu del header */
-@media (min-width: 768px) {
-  .navbar-nav {
-      float: right;
-  }
+/* Estilo para el alto del nav */
+.navbar {
+  min-height: 80px;
+}
+.navbar-nav {
+    float: right;
+}
+
+/* Estilos de imágen de fondo 1 */
+.img-back {
+  background-image: url(../assets/images/taxi.jpg);
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 65em
+}
+
+/* Estilos de la sección de logearse */
+.box-login {
+  color: #FFF;
+  margin-top: 15em;
+  padding: 2em;
+}
+
+/* Estilo logo blanco */
+.logo{
+  width: 5em;
 }

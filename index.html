@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>Lab->Car</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
-  </head>
-  <body>
-    <!-- Menu Nav-bar -->
+</head>
+
+<body>
+  <!-- Menu Nav-bar -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <!-- botón de menú mobile -->
@@ -19,19 +21,53 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <img class="navbar-brand"src="assets/images/logoForma.png" alt="Logo">
+        <img class="navbar-brand" src="assets/images/logoForma.png" alt="Logo">
       </div>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#">Viaja</a</li>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Viaja</a</li>
         <li><a href="#">Conduce</a></li>
-        <li><a href="#">Inicia sesión</a></li>
+          <li><a href="#">Inicia sesión</a></li>
+      </div>
     </div>
+  </nav>
 
-    <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="js/app.js" type="application/javascript"></script>
-  </body>
+  <!-- Sección de login -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="img-back">
+        <div class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-7 primary box-login">
+          <!-- Sección en versión desktop -->
+          <div class="hidden-xs">
+            <h1>Disfruta del viaje<br>Eres dueño de tu tiempo</h1>
+            <h4>Viaja con <img class="logo"src="assets/images/logoBlanco.png" alt="Logo"> </h4>
+            <p><a class="btn btn-default btn-md" href="#" role="button">REGISTRATE</a></p>
+            <div style="margin: 2em 0 2em 0">
+              <hr>
+              <div class="box">
+                <h6>o bien</6>
+              </div>
+              <hr>
+            </div>
+            <p><a class="btn btn-default btn-md" href="#" role="button">Conviértete en un conductor</a></p>
+          </div>
+          <!-- Sección en versión mobile -->
+          <div class="hidden-sm hidden-md hidden-lg">
+            <h2>Comienza a viajar<br>con <img src="assets/images/logoBlanco.png" alt="Logo"></h2>
+            <p style="margin-top: 2em"><a class="btn btn-default btn-md" href="#" role="button">Descargar el app</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="js/app.js" type="application/javascript"></script>
+</body>
+
 </html>

@@ -1,4 +1,9 @@
 /* Clases generales */
+
+body {
+  background: #f7b617;
+}
+
 h1 {
   margin: 0 0 1em 0;
 }
@@ -38,7 +43,7 @@ hr {
   height: 65em
 }
 
-/* Estilos de la sección de logearse */
+/* Estilos de la sección de login*/
 .box-login {
   color: #FFF;
   margin-top: 15em;
@@ -48,4 +53,12 @@ hr {
 /* Estilo logo blanco */
 .logo{
   width: 5em;
+}
+
+/* Estilos sección New App */
+.new-app{
+  border: .1em solid #FFF;
+  color: #FFF;
+  height: auto;
+  margin: 2em 0 2em 0;
 }

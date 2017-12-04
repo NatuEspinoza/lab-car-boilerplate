@@ -1,1 +1,11 @@
-/* Los estilos de tu proyecto */
+/* Estilo para el boton de menú mobile */
+.navbar-toggle {
+  float: left;
+}
+
+/* Estilo para menu del header */
+@media (min-width: 768px) {
+  .navbar-nav {
+      float: right;
+  }
+}

@@ -83,3 +83,21 @@ hr {
   background-color: #f7b617;
   border-color: #ac8705;
 }
+
+/* Sección de tarifas */
+
+.input-group-addon {
+  background-color: #f7b617;
+  border: none;
+}
+.form-control {
+  background-color: #f7b617;
+  color: #FFF;
+  border: 1px solid #FFF;
+}
+
+/* Estilos sección de tarifas */
+.tarifa {
+  margin: 5em 0 10em 5em;
+  color: #FFF;
+}

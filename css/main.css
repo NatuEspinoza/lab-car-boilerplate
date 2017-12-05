@@ -2,6 +2,7 @@
 
 body {
   background: #f7b617;
+  color: #FFF;
 }
 
 h1 {
@@ -79,9 +80,19 @@ hr {
   padding: 5em 2em 2em 2em;
   margin-bottom: 20em;
 }
-.btn-primary{
+.btn-primary {
   background-color: #f7b617;
-  border-color: #ac8705;
+  border-color: #d98900;
+}
+
+.btn-primary:hover {
+  background-color: #d98900;
+  border-color: #d98900;
+}
+
+.btn-primary:checked {
+  background-color: #d98900;
+  border-color: #d98900;
 }
 
 /* Sección de tarifas */
@@ -100,4 +111,34 @@ hr {
 .tarifa {
   margin: 5em 0 10em 5em;
   color: #FFF;
+}
+.thumbnail {
+  background-color: #f7b617;
+  border: 0.0625em solid #FFF;
+  border-radius: 0;
+}
+
+/* Estilos del footer */
+.footer {
+  background: #2b2b2b;
+  color: #FFF;
+}
+
+.logos-app {
+  width: 7.5em;
+  height: auto;
+  margin-top: 1em;
+}
+.list, a{
+  text-decoration: none;
+  color: #FFF;
+  list-style: none;
+  font-size: .95em;
+}
+.fa{
+  color: #FFF;
+  padding: .2em;
+}
+.footer p{
+  font-size: .90em;
 }

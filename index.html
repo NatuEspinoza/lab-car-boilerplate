@@ -10,6 +10,99 @@
 </head>
 
 <body>
+  <!-- BEGIN # MODAL LOGIN -->
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" align="center">
+          <img class="img-circle" id="img_logo" src="assets/images/user.png">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+  						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+  					</button>
+        </div>
+
+        <!-- Begin # DIV Form -->
+        <div id="div-forms">
+
+          <!-- Begin # Login Form -->
+          <form id="login-form">
+            <div class="modal-body">
+              <div style="margin-top: 1em">
+                <div class="glyphicon glyphicon-user"></div>
+                <span><input id="login_username"  type="text" placeholder="Username" required>
+				    		</span>
+              </div>
+              <div>
+                <div class="glyphicon glyphicon-lock"></div>
+                <span><input id="login_password"  type="password" placeholder="Password" required></span>
+              </div>
+
+
+            </div>
+            <div class="modal-footer">
+              <div>
+                <button type="submit" class="btn btn-warning btn-md" style="margin-left: 9em">Login</button>
+              </div>
+              <div>
+                <span>Forgot Password?</span>
+                <button id="login_register_btn" type="button" class="btn btn-link">Click here</button>
+              </div>
+            </div>
+          </form>
+          <!-- End # Login Form -->
+
+          <!-- Begin | Lost Password Form -->
+          <form id="lost-form" style="display:none;">
+            <div class="modal-body">
+              <div id="div-lost-msg">
+                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                <span id="text-lost-msg">Type your e-mail.</span>
+              </div>
+              <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+            </div>
+            <div class="modal-footer">
+              <div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+              </div>
+              <div>
+                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
+                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+              </div>
+            </div>
+          </form>
+          <!-- End | Lost Password Form -->
+
+          <!-- Begin | Register Form -->
+          <form id="register-form" style="display:none;">
+            <div class="modal-body">
+              <div id="div-register-msg">
+                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                <span id="text-register-msg">Register an account.</span>
+              </div>
+              <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+              <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+              <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+            </div>
+            <div class="modal-footer">
+              <div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+              </div>
+              <div>
+                <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+                <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+              </div>
+            </div>
+          </form>
+          <!-- End | Register Form -->
+
+        </div>
+        <!-- End # DIV Form -->
+
+      </div>
+    </div>
+  </div>
+  <!-- END # MODAL LOGIN -->
+
   <!-- Menu Nav-bar -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -42,7 +135,7 @@
           <div class="hidden-xs">
             <h1>Disfruta del viaje<br>Eres dueño de tu tiempo</h1>
             <h4>Viaja con <img class="logo"src="assets/images/logoBlanco.png" alt="Logo"> </h4>
-            <p><a class="btn btn-default btn-md" href="#" role="button">REGISTRATE</a></p>
+            <p><a class="btn btn-default btn-md" href="#" role="button" data-toggle="modal" data-target="#login-modal">REGISTRATE</a></p>
             <div style="margin: 2em 0 2em 0">
               <hr>
               <div class="box">
@@ -66,11 +159,11 @@
   <!-- Sección Descarga nueva App -->
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-10 col-xs-11 col-xs-offset-1 new-app">
+      <div class="col-md-10 new-app">
         <div class="row">
-          <div class="col-md-offset-1 col-md-5">
+          <div class="col-md-offset-1 col-md-5 col-xs-10 col-xs-offset-1">
             <h1 class="hidden-sm hidden-md hidden-lg" style="text-align: center; margin-top: 1em">La nueva App</h1>
-            <img class="img-responsive" style="margin: 2em" src="assets/images/iPhone6Plus.png" alt="iPhone6Plus">
+            <img class="img-responsive" style="margin: 1em 0 1em 0" src="assets/images/iPhone6Plus.png" alt="iPhone6Plus">
           </div>
           <div class="col-md-4 hidden-xs" style="margin: 2em">
             <h3 style="margin-bottom: 1em">Descarga la nueva app</h3>
@@ -80,7 +173,7 @@
         </div>
       </div>
       <div class="col-xs-12">
-        <h4 class="hidden-sm hidden-md hidden-lg">Llega a tu destino aun más rápido</h4>
+        <h4 class="hidden-sm hidden-md hidden-lg"><strong>Llega a tu destino aun más rápido</strong></h4>
       </div>
     </div>
   </div>
@@ -93,7 +186,7 @@
           <div class="col-md-4 col-md-offset-8 box-driver">
             <h3>Conduce cuando quieras</h3>
             <p>LabCar es una opción flexible para alcanzar tus metas financieras</p>
-            <p><a class="btn btn-primary btn-md" href="#" role="button">Conviértete en un conductor</a></p>
+            <p><a class="btn btn-warning btn-md" href="#" role="button">Conviértete en un conductor</a></p>
           </div>
         </div>
       </div>
@@ -117,21 +210,22 @@
         <p style="margin-top: 2em; text-align: center"><a class="btn btn-default btn-md" href="#" role="button">¡TRAZAR RUTA!</a></p>
       </div>
       <div class="col-sm-5 col-sm-offset-2">
-      <iframe class="thumbnail" style="margin: 4em 0 3em 0" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13306.328684233877!2d-70.62762785!3d-33.5122464!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scl!4v1512438979028" width="410" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe class="thumbnail hidden-xs" style="margin: 4em 0 3em 0" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13306.328684233877!2d-70.62762785!3d-33.5122464!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scl!4v1512438979028" width="410" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe class="thumbnail hidden-sm hidden-md hidden-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.161232511636!2d-70.64389858518132!3d-33.419040603286284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5ebb9db324b%3A0xe1e0cea74997141!2sLaboratoria+Chile!5e0!3m2!1ses!2scl!4v1512485685492" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
 
   <!-- Footer -->
   <div class="container-fluid footer">
-    <div class="container">
+    <div class="container-fluid">
       <div class="page-header">
-        <img class="logo"src="assets/images/logoBlanco.png" alt="Logo">
+        <img src="assets/images/logoBlanco.png" alt="Logo">
       </div>
       <footer>
       <div class="row">
         <div class="col-md-6 col-md-offset-2" style="line-height: 3">
-            <div class="col-md-5 col-md-offset-1">
+            <div class="col-md-5 col-md-offset-1 col-xs-6">
                   <ul class="list">
                       <li><a href="#">Viaje</a></li>
                       <li><a href="#">Conduce</a></li>
@@ -142,7 +236,7 @@
                       <li><a href="#">Seguridad</a></li>
                   </ul>
               </div>
-            <div class="col-md-5 col-md-offset-1">
+            <div class="col-md-5 col-md-offset-1 hidden-xs">
                   <ul class="list">
                       <li><a href="#">Oportunidades</a></li>
                       <li><a href="#">Nuestra historia</a></li>
@@ -155,19 +249,26 @@
                   </ul>
               </div>
           </div>
+          <div class="col-xs-6 icon-social hidden-sm hidden-md hidden-lg">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <i class="fa fa-apple" aria-hidden="true"></i>
+            <i class="fa fa-play" aria-hidden="true"></i>
+          </div>
 
-        <div class="col-md-2 col-md-offset-1" style="vertical-align: bottom">
+        <div class="col-md-2 col-md-offset-1 col-xs-2">
           <img class="logos-app" src="assets/images/appstore.png" alt="appstore">
           <img class="logos-app" src="assets/images/enBadgeWebGeneric.png" alt="appstore">
         </div>
       </div>
   </footer>
   <div class="page-header icon-social" style="margin-top: .05em">
-    <i class="fa fa-facebook" aria-hidden="true"></i>
-    <i class="fa fa-twitter" aria-hidden="true"></i>
-    <i class="fa fa-linkedin" aria-hidden="true"></i>
-    <i class="fa fa-apple" aria-hidden="true"></i>
-    <i class="fa fa-play" aria-hidden="true"></i>
+    <i class="fa fa-facebook hidden-xs" aria-hidden="true"></i>
+    <i class="fa fa-twitter hidden-xs" aria-hidden="true"></i>
+    <i class="fa fa-linkedin hidden-xs" aria-hidden="true"></i>
+    <i class="fa fa-apple hidden-xs" aria-hidden="true"></i>
+    <i class="fa fa-play hidden-xs" aria-hidden="true"></i>
   </div>
   <div class="row">
     <div class="col-md-3">

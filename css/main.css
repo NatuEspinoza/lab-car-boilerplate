@@ -3,8 +3,17 @@
 body {
   background: #f7b617;
   color: #FFF;
+  font-family: 'Roboto', sans-serif;
 }
 
+a:active:focus {
+  border: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
 
 h1 {
   margin: 0 0 1em 0;
@@ -14,6 +23,7 @@ hr {
   width: 8em;
   display: inline-flex;
 }
+
 .primary {
   background: #f7b617;
 }
@@ -26,33 +36,36 @@ hr {
 
 /* Estilos del Navbar */
 
-.navbar-collapse{
+.navbar-collapse {
   margin-top: 1em;
 }
 
 .navbar-brand {
   margin-top: 1em;
 }
+
 /* Estilo para el boton de menú mobile */
+
 .navbar-toggle {
   float: left;
 }
 
 /* Estilo para el alto del nav */
+
 .navbar {
   min-height: 80px;
 }
+
 .navbar-nav {
-    float: right;
+  float: right;
 }
 
 /* FIN -Estilos del Navbar */
 
-
-
 /* Estilos de la sección de login*/
 
 /* Estilos de imágen de fondo 1 */
+
 .img-back {
   background-image: url(../assets/images/taxi.jpg);
   background-size: cover;
@@ -68,7 +81,8 @@ hr {
 }
 
 /* Estilo logo blanco */
-.logo{
+
+.logo {
   width: 5em;
 }
 
@@ -78,31 +92,37 @@ hr {
   height: auto;
   padding: 0 1em 0 1em;
 }
+
 /* FIN - Estilos de la sección de login*/
 
 /* Estilos sección New App */
-.new-app{
+
+.new-app {
   border: .1em solid #FFF;
   color: #FFF;
   height: auto;
   margin: 2em 0 2em 0;
 }
+
 /* FIN - Estilos sección New App */
 
 /* Estilos sección de registro conductores */
-.img-back2{
+
+.img-back2 {
   background-image: url(../assets/images/conduce.jpg);
   background-size: cover;
   background-position: 50% 50%;
   width: 100%;
   height: auto;
 }
-.box-driver{
+
+.box-driver {
   color: #FFF;
   background-color: rgba(5, 5, 5, 0.50);
   padding: 5em 2em 2em 2em;
   margin-bottom: 20em;
 }
+
 .btn-primary {
   background-color: #f7b617;
   border-color: #d98900;
@@ -117,6 +137,7 @@ hr {
   background-color: #d98900;
   border-color: #d98900;
 }
+
 /* FIN - Estilos sección de registro conductores */
 
 /* Estilos sección de tarifas */
@@ -125,15 +146,18 @@ hr {
   background-color: #f7b617;
   border: none;
 }
+
 .form-control {
   background-color: #f7b617;
   color: #FFF;
   border: 1px solid #FFF;
 }
+
 .tarifa {
   margin: 5em 0 5em 0em;
   color: #FFF;
 }
+
 .thumbnail {
   background-color: #f7b617;
   border: 0.0625em solid #FFF;
@@ -142,11 +166,13 @@ hr {
 }
 
 iframe {
-    width: 100%;
+  width: 100%;
 }
+
 /* FIN - Estilos sección de tarifas */
 
 /* Estilos del footer */
+
 .footer {
   background: #2b2b2b;
   color: #FFF;
@@ -163,100 +189,77 @@ iframe {
   padding: 0;
 }
 
-.list, a{
+.list, a {
   text-decoration: none;
   color: #FFF;
   list-style: none;
   font-size: .95em;
 }
-.fa{
+
+.fa {
   color: #FFF;
   padding: .2em;
 }
-.footer p{
+
+.footer p {
   font-size: .90em;
 }
+
 /* FIN -Estilos del footer */
 
-/* #####################################################################
-   #
-   #   Project       : Modal Login with jQuery Effects
-   #   Author        : Rodrigo Amarante (rodrigockamarante)
-   #   Version       : 1.0
-   #   Created       : 07/28/2015
-   #   Last Change   : 08/02/2015
-   #
-   ##################################################################### */
-
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+/* Estilos de MODAL LOGIN */
 
 * {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 #login-modal .modal-dialog {
-    width: 350px;
+  width: 350px;
 }
 
 #login-modal input[type=text], input[type=password] {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 
-#div-login-msg,
-#div-lost-msg,
-#div-register-msg {
-    border: 1px solid #dadfe1;
-    height: 30px;
-    line-height: 28px;
-    transition: all ease-in-out 500ms;
+#div-login-msg, #div-lost-msg, #div-register-msg {
+  border: 1px solid #dadfe1;
+  height: 30px;
+  line-height: 28px;
+  transition: all ease-in-out 500ms;
 }
 
-#div-login-msg.success,
-#div-lost-msg.success,
-#div-register-msg.success {
-    border: 1px solid #68c3a3;
-    background-color: #c8f7c5;
+#div-login-msg.success, #div-lost-msg.success, #div-register-msg.success {
+  border: 1px solid #68c3a3;
+  background-color: #c8f7c5;
 }
 
-#div-login-msg.error,
-#div-lost-msg.error,
-#div-register-msg.error {
-    border: 1px solid #eb575b;
-    background-color: #ffcad1;
+#div-login-msg.error, #div-lost-msg.error, #div-register-msg.error {
+  border: 1px solid #eb575b;
+  background-color: #ffcad1;
 }
 
-#icon-login-msg,
-#icon-lost-msg,
-#icon-register-msg {
-    width: 30px;
-    float: left;
-    line-height: 28px;
-    text-align: center;
-    background-color: #dadfe1;
-    margin-right: 5px;
-    transition: all ease-in-out 500ms;
+#icon-login-msg, #icon-lost-msg, #icon-register-msg {
+  width: 30px;
+  float: left;
+  line-height: 28px;
+  text-align: center;
+  background-color: #dadfe1;
+  margin-right: 5px;
+  transition: all ease-in-out 500ms;
 }
 
-#icon-login-msg.success,
-#icon-lost-msg.success,
-#icon-register-msg.success {
-    background-color: #68c3a3 !important;
+#icon-login-msg.success, #icon-lost-msg.success, #icon-register-msg.success {
+  background-color: #68c3a3 !important;
 }
 
-#icon-login-msg.error,
-#icon-lost-msg.error,
-#icon-register-msg.error {
-    background-color: #eb575b !important;
+#icon-login-msg.error, #icon-lost-msg.error, #icon-register-msg.error {
+  background-color: #eb575b !important;
 }
 
 #img_logo {
-    max-height: 100px;
-    max-width: 100px;
+  max-height: 100px;
+  max-width: 100px;
 }
-
-/* #########################################
-   #    override the bootstrap configs     #
-   ######################################### */
 
 input {
   border-radius: .2em;
@@ -264,83 +267,151 @@ input {
 }
 
 .modal-backdrop.in {
-    filter: alpha(opacity=50);
-    opacity: .8;
+  filter: alpha(opacity=50);
+  opacity: .8;
 }
 
 .modal-content {
-    background-color: #a5a7a5;
-    border: 1px solid #bdc3c7;
-    border-radius: 0;
+  background-color: #a5a7a5;
+  border: 1px solid #bdc3c7;
+  border-radius: 0;
 }
 
 .modal-header {
-    min-height: 16.43px;
-    padding: 15px 15px 15px 15px;
-    border-bottom: 0px;
+  min-height: 16.43px;
+  padding: 15px 15px 15px 15px;
+  border-bottom: 0px;
 }
 
 .modal-body {
-    position: relative;
-    padding: 5px 15px 5px 15px;
+  position: relative;
+  padding: 5px 15px 5px 15px;
 }
 
 .modal-footer {
-    padding: 15px 15px 15px 15px;
-    text-align: left;
-    border-top: 0px;
+  padding: 15px 15px 15px 15px;
+  text-align: left;
+  border-top: 0px;
 }
 
-.checkbox {
-    margin-bottom: 0px;
-}
-
-
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn.active.focus {
-    outline: none;
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+  outline: none;
 }
 
 .btn-lg, .btn-group-lg>.btn {
-    border-radius: 0px;
+  border-radius: 0px;
 }
 
 .btn-link {
-    padding: 5px 10px 0px 0px;
-    color: #9f0303;
+  padding: 5px 10px 0px 0px;
+  color: #9f0303;
 }
 
 .btn-link:hover, .btn-link:focus {
-    color: #af7e03;
-    text-decoration: none;
+  color: #af7e03;
+  text-decoration: none;
 }
 
 .glyphicon {
-    top: 0px;
+  top: 0px;
 }
 
 .form-control {
   border-radius: .5em;
+  background: #FFF;
 }
 
+/* FIN Estilos de MODAL LOGIN */
+
+/* Estilo MODAL REGISTER */
+
+.log-frm ul li p {
+  border: 1px solid #ccc;
+  color: #666;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 10px 0;
+  padding: 2px 5px;
+}
+
+.log-frm ul li input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 0;
+  color: #000;
+  display: block;
+  font-size: 13px;
+  line-height: 19px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.model-l {
+  padding-right: 0px;
+}
+
+.model-r .o-r {
+  background: #fff none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 100%;
+  bottom: 0;
+  height: 40px;
+  margin: auto;
+  overflow: hidden;
+  position: absolute;
+  left: -19px;
+  top: 0;
+  width: 40px;
+  z-index: 99999;
+}
+
+.model-r .o-r span {
+  background: #fff none repeat scroll 0 0;
+  border: 2px solid #ccc;
+  color: #666;
+  display: block;
+  height: 100%;
+  padding: 8px 0 0;
+  text-align: center;
+  width: 100%;
+  border-radius: 100%;
+  display: block;
+  position: relative;
+}
+
+.model-r {
+  padding-left: 30px;
+  position: relative;
+  border-left: 1px dotted #cccccc;
+}
+
+.modal-content {
+  border-radius: 1em
+}
+
+.forgot {
+  display: none;
+}
+
+/* FIN Estilo MODAL REGISTER */
+
+/* Estilos MODAL DRIVER */
+
+/* FIN MODAL DRIVER */
 
 /* Estilos especiales para responsive */
+
 @media (max-width: 768px) {
   .img-back {
     height: 40em;
   }
-  .img-back2{
+  .img-back2 {
     background-image: url(../assets/images/conduce.jpg);
     background-size: cover;
     background-position: 50% 50%;
     width: 100%;
     height: 30em;
   }
-  .new-app{
+  .new-app {
     margin: 2em 1em 2em 1em;
   }
 }

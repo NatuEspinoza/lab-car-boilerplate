@@ -1,13 +1,4 @@
-/* #####################################################################
-   #
-   #   Project       : Modal Login with jQuery Effects
-   #   Author        : Rodrigo Amarante (rodrigockamarante)
-   #   Version       : 1.0
-   #   Created       : 07/29/2015
-   #   Last Change   : 08/04/2015
-   #
-   ##################################################################### */
-
+//MODAL LOGIN
 $(function() {
 
     var $formLogin = $('#login-form');
@@ -93,4 +84,14 @@ $(function() {
             $iconTag.removeClass($iconClass + " " + $divClass);
   		}, $msgShowTime);
     }
+});
+
+// MODAL REGISTER
+function ayantoggle(){
+    $(".forgot").slideToggle('slow');
+}
+$(document).ready(function(){
+    $(".for-got").click(function(){
+
+    });
 });

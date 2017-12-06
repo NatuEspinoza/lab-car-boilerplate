@@ -7,10 +7,63 @@
   <title>Lab->Car</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 </head>
 
 <body>
-  <!-- BEGIN # MODAL LOGIN -->
+  <!-- MODAL REGISTER -->
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        </div>
+
+        <div class="modal-body">
+
+          <div class="col-md-12 col-sm-12 no-padng">
+            <button type="button" name="userRegBtn" class="btn btn-block" style="background: #000">Ya tienes una cuenta?</button>
+            <p style="margin: 1em; text-align: center">O CREA UNA CUENTA NUEVA</p>
+            <div>
+              <form method="post" id="userRegisterFrm" class="log-frm" name="userRegisterFrm">
+                <ul>
+                  <li><input type="text" placeholder="First Name" name="fName" class="form-control"></li>
+                  <li><input type="text" placeholder="Last Name" name="lName" class="form-control"></li>
+                  <li><input type="text" placeholder="Email Id" name="emailId" class="form-control"></li>
+                  <li><input type="password" placeholder="Password" name="password" class="form-control"></li>
+                  <li><input type="password" placeholder="Confirm Password" name="repassword" class="form-control"></li>
+                  <br>
+
+                  <div style="display:none;" class="sign greenglow">
+                    <li> <i class="icon-check"></i><br>
+                      <font color="red">
+                        User registration successful.<br> Your login Url already send to your email.
+
+                      </font>
+                    </li>
+                  </div>
+                  <div style="display:none;" id="regnSuc11" class="sign redglow">
+                    <li> <i class="icon-mail"></i><br>
+                      <font color="red"> Email Exist.</font>
+                    </li>
+                  </div>
+                </ul>
+              </form>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" name="userRegBtn" class="btn btn-default btn-block">Cómo te enteraste de nosotros?</button>
+          <button type="button" name="userRegBtn" class="btn btn-block" style="background: #03abbb">ENVIAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FIN MODAL REGISTER -->
+
+  <!-- MODAL LOGIN -->
   <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -58,7 +111,7 @@
                 <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
                 <span id="text-lost-msg">Type your e-mail.</span>
               </div>
-              <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+              <input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>
             </div>
             <div class="modal-footer">
               <div>
@@ -79,13 +132,13 @@
                 <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
                 <span id="text-register-msg">Register an account.</span>
               </div>
-              <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+              <input id="register_username" class="form-control" type="text" placeholder="Username" required>
               <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
               <input id="register_password" class="form-control" type="password" placeholder="Password" required>
             </div>
             <div class="modal-footer">
               <div>
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                <button type="submit" class="btn btn-warning btn-lg btn-block">Register</button>
               </div>
               <div>
                 <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
@@ -101,7 +154,11 @@
       </div>
     </div>
   </div>
-  <!-- END # MODAL LOGIN -->
+  <!-- FIN MODAL LOGIN -->
+
+  <!-- MODAL DRIVER -->
+  <!-- FIN MODAL DRIVER -->
+
 
   <!-- Menu Nav-bar -->
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -121,7 +178,7 @@
         <ul class="nav navbar-nav">
           <li><a href="#">Viaja</a</li>
         <li><a href="#">Conduce</a></li>
-          <li><a href="#">Inicia sesión</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#login-modal">Inicia sesión</a></li>
       </div>
     </div>
   </nav>
@@ -135,7 +192,7 @@
           <div class="hidden-xs">
             <h1>Disfruta del viaje<br>Eres dueño de tu tiempo</h1>
             <h4>Viaja con <img class="logo"src="assets/images/logoBlanco.png" alt="Logo"> </h4>
-            <p><a class="btn btn-default btn-md" href="#" role="button" data-toggle="modal" data-target="#login-modal">REGISTRATE</a></p>
+            <p><a class="btn btn-default btn-md" href="#myModal" role="button" data-toggle="modal">REGISTRATE</a></p>
             <div style="margin: 2em 0 2em 0">
               <hr>
               <div class="box">
@@ -186,7 +243,7 @@
           <div class="col-md-4 col-md-offset-8 box-driver">
             <h3>Conduce cuando quieras</h3>
             <p>LabCar es una opción flexible para alcanzar tus metas financieras</p>
-            <p><a class="btn btn-warning btn-md" href="#" role="button">Conviértete en un conductor</a></p>
+            <p><a class="btn btn-warning btn-md" href="#" role="button" data-toggle="modal" data-target="#login-modal">Conviértete en un conductor</a></p>
           </div>
         </div>
       </div>
